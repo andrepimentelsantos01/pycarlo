@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pycarlo"
+version = "0.1.0"
+description = "Simulação de risco para fluxo de caixa projetado"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["numpy>=1.24", "scipy>=1.10", "pandas>=2.0", "matplotlib>=3.7", "pyarrow>=12"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+pycarlo = "pycarlo.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["pycarlo*"]
